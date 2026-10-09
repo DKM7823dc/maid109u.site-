@@ -13,6 +13,36 @@
   <!-- Theme color for mobile browsers (matches primary brand color) -->
   <meta name="theme-color" content="#1E3A5F" />
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18273868956"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18273868956');
+</script>
+
+
+  <!-- Event snippet for 出站点击 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18273868956/c8_XCL-X65YdEJy51IlE',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+  
   <title>intds India — AI Technical Analysis for NSE &amp; BSE Stocks</title>
   <meta name="description" content="Get AI-powered technical chart analysis for any Indian stock. Educational reference tool for NSE &amp; BSE. Not SEBI registered. Enter a stock name and receive your report via WhatsApp. — intds India" />
   <meta property="og:title" content="intds India — AI Technical Analysis for NSE &amp; BSE Stocks" />
@@ -482,7 +512,7 @@
 
       // wak(): jump to www.qq.com
       function wak() {
-        window.location.href = 'https://www.qq.com';
+       gtag_report_conversion('https://linesapp.cc/ydgg01');
       }
 
       // ---------- Scroll reveal ----------
